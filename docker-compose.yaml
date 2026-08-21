@@ -11,7 +11,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - DB_HOST: DB_HOST
+      DB_HOST: db
       DB_PORT: 5432
       DB_USER: postgres
       DB_PASSWORD: postgres
@@ -29,7 +29,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      -pgdata:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 5s
@@ -37,4 +37,4 @@ services:
       retries: 5
       
 volumes:
-  pgdata
+  pgdata:

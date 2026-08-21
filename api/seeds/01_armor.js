@@ -19,9 +19,9 @@ exports.seed = async function (knex) {
         armor: parseInt(record.armor, 10),
         encumbrance: parseFloat(record.encumbrance),
         gold: parseInt(record.gold, 10),
-        upgrade-material: record.upgrade-material,
+        upgrade: record.upgrade,
         perk: record.perk,
-        type_armor: r.type_armor,
+        type_armor: record.type_armor,
     }));
 
     await knex('armor').insert(rows);

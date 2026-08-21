@@ -9,7 +9,7 @@ exports.up = function(knex) {
     table.integer('damage');
     table.integer('weight');
     table.integer('gold');
-    table.string('upgrade-material');
+    table.string('upgrade_material');
     table.string('perk');
     table.string('category');
     table.string('speed');

@@ -7,25 +7,24 @@ export default function GearViewer() {
     const [ gearItem, setGearItem ] = useState({});
 
     useEffect(() => {
-        const getGearItem = () => {/*
-            fetch(URL GOES HERE)
+        const getGearItem = () => {
+            fetch(`http://localhost:3000/${type}/${id}`)
             .then(response => response.json())
-            .then(jsonResponse => setGearItem(jsonResponse));*/
-            setGearItem({id: id, name: `Test ${type}`})
+            .then(jsonResponse => setGearItem(jsonResponse));
         }
 
         getGearItem();
     }, [])
 
     return (
-        <div className='gear-viewer-page'>
-            <button onClick={() => navigate("/")}>Back</button>
+        <div className='page-display'>
+            <button className='back-button' onClick={() => navigate(`/${type}`)}>Back</button>
             <div className='gear-item-container'>
-                <h1>{gearItem.id}: {gearItem.name}</h1>
+                <h1>{gearItem.name}</h1>
                 <div className='gear-item-properties'>
                     {Object.keys(gearItem).map((column) => {
                         return (
-                            <div className='gear-item-property'>{column}: {gearItem[column]}</div>
+                            <div className='gear-item-property' key={gearItem.id}>{column}: {gearItem[column]}</div>
                         )
                     })}
                 </div>

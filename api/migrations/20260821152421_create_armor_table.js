@@ -9,7 +9,7 @@ exports.up = function(knex) {
     table.integer('armor');
     table.float('encumbrance');
     table.integer('gold');
-    table.string('upgrade-material');
+    table.string('upgrade');
     table.string('perk');
     table.string('type_armor');
     table.timestamps(true, true);
