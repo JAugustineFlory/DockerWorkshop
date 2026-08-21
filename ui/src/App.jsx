@@ -5,9 +5,18 @@ function App() {
 
   return (
     <>
-      <h1>Authors:</h1>
-      <h2>Jacob Flory</h2>
-      <h2>Emilio Roybal</h2>
+      <header>
+        <h1>Skyrim Gear Viewer</h1>
+        <p>By: Jacob Flory and Emilio Roybal</p>
+      </header>
+      <div className="split-menu">
+        <div className="gear-list-container" id="armor-list-container">
+          <h2>Armor</h2>
+        </div>
+        <div className="gear-list-container" id="weapons-list-container">
+          <h2>Weapons</h2>
+        </div>
+      </div>
     </>
   )
 }
