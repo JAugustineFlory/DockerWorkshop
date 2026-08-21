@@ -14,5 +14,15 @@ exports.seed = async function (knex) {
         trim: true,
     });
 
+    const rows = records.map(record => ({
+        name: record.name,
+        armor: parseInt(record.armor, 10),
+        encumbrance: parseFloat(record.encumbrance),
+        gold: parseInt(record.gold, 10),
+        upgrade-material: record.upgrade-material,
+        perk: record.perk,
+        type_armor: r.type_armor,
+    }));
+
     await knex('armor').insert(rows);
 }

@@ -3,8 +3,8 @@
  * @returns { Promise<void> }
  */
 exports.up = function(knex) {
-  return knex.schema.createTable('weapons', table () => {
-    table.incrememnts('id');
+  return knex.schema.createTable('weapons', (table) => {
+    table.increments('id');
     table.string('name');
     table.integer('damage');
     table.integer('weight');

@@ -7,9 +7,13 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: 'localhost'
-    user: postgres,
-    password: docker,
+    connection: {
+      host: process.env.DB_HOST || 'localhost',
+      port: process.env.DB_PORT || 5432,
+      user: process.env.DB_USER || 'postgres',
+      password: process.env.DB_PASSWORD || 'docker',
+      database: process.env.DB_NAME || 'skyrim_gear',
+    },
     pool: { min: 5, max: 10 }
   },
 
