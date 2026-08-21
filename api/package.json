@@ -1,14 +1,11 @@
 {
-  "name": "api",
+  "name": "skyrim-gear-api",
   "version": "1.0.0",
-  "main": "import-csv.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "csv-parse": "^7.0.2",
     "express": "^5.2.1",
