@@ -7,7 +7,10 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: 'postgres://postgres:docker@localhost/'
+    connection: 'localhost'
+    user: postgres,
+    password: docker,
+    pool: { min: 5, max: 10 }
   },
 
   staging: {
